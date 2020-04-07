@@ -1,0 +1,644 @@
+/*------------------------------------------------------------------
+        [ Master Stylesheet ]
+
+Project      :    DoA || Business Template
+Version      :    1.0
+Last change  :    20/07/2019 [fixed Float bug, vf]
+Author Name  :    ShuvoSylhet
+Primary use  :    Business
+
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+        [ Table of contents ]
+
+            01. Reset CSS
+            02. Header CSS
+            03. Hero Area CSS
+            04. About Section CSS
+            05. Features Section CSS
+            06. Services Section CSS
+            07. Portfolio Section CSS
+            08. Pricing Section CSS
+            09. Feedback Section CSS
+            10. Contact Section CSS
+            11. Footer Section CSS
+
+-------------------------------------------------------------------*/
+
+/*
+==========================================
+    Reset CSS
+==========================================
+*/
+
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900|Quicksand:300,400,500,700&display=swap');
+
+body{
+    scroll-behavior: smooth;
+}
+ul {
+    margin: 0;
+    padding: 0;
+}
+ul li {
+    list-style: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: #223 !important;
+    font-weight: 500;
+    padding: 0 15px !important;
+}
+p {
+    margin: 0;
+    line-height: 30px;
+    color: #567;
+    padding: 0 10px;
+}
+.radius-30 {
+    border-radius: 30px;
+}
+.d-table{
+    width: 100%;
+    height: 100%;
+}
+.d-tablecell{
+    display: table-cell;
+    vertical-align: middle;
+}
+.btn-primary {
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 15px;
+}
+.btn-primary.focus, .btn-primary:focus {
+	box-shadow: none;
+}
+.ptb-100 {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.ptb-100-70 {
+    padding-top: 100px;
+    padding-bottom: 70px;
+}
+.mr--100{
+    margin-right: -100px;
+}
+.ml--100{
+    margin-left: -100px;
+}
+/* Preloader */
+.preloader {
+    position: fixed;
+    background: #223;
+    z-index: 999999999;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    text-align: center;
+}
+.lds-ring {
+    display: inline-block;
+    position: relative;
+    width: 64px;
+    height: 64px;
+}
+.lds-ring div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 51px;
+    height: 51px;
+    margin: 6px;
+    border: 6px solid #A8E6CF;
+    border-radius: 50%;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: #A8E6CF transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+    animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+    animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+    animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+/*
+==========================================
+    Header CSS
+==========================================
+*/
+.main-menu{
+    font-family: 'Montserrat', sans-serif;
+}
+.navbar-light .navbar-nav .nav-link {
+	color: #223;
+	margin-right: 10px;
+    margin-left: 10px;
+    font-size: 15px;
+	font-weight: 600;
+	text-transform: uppercase;
+    letter-spacing: 1px;
+    
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    -ms-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+}
+.navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show > .nav-link {
+	color: #007bff;
+}
+.menu-shrink {
+    background-image: linear-gradient(to top, #eeeeee, #f1f1f1, #f4f4f4, #f8f8f8, #fbfbfb, #fbfbfb, #fbfbfb, #fbfbfb, #f8f8f8, #f4f4f4, #f1f1f1, #eeeeee);
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.nav-link-primary>.nav-link {
+    padding: 10px 35px !important;
+}
+
+/*
+==========================================
+    Hero Area CSS
+==========================================
+*/
+.hero-area {
+    background: url('../images/home/hero-bg1.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+    font-family: 'Quicksand', sans-serif;
+}
+.hero-banner {
+    height: 100vh;
+    text-align: center;
+}
+.hero-text h2 span{
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.hero-text p {
+    font-weight: 500;
+}
+.hero-text .btn-primary {
+	font-size: 16px;
+	padding: 15px 35px;
+}
+.pulse-button {
+    position: relative;
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+    border: none;
+    animation: pulse 1s infinite;
+}  
+@keyframes pulse {
+    0% {
+        -webkit-transform: scale(0.9);
+        -moz-transform: scale(0.9);
+        -ms-transform: scale(0.9);
+        -o-transform: scale(0.9);
+        transform: scale(0.9);
+    }
+    70% {
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+        transform: scale(1);
+    }
+    100% {
+        -webkit-transform: scale(0.9);
+        -moz-transform: scale(0.9);
+        -ms-transform: scale(0.9);
+        -o-transform: scale(0.9);
+        transform: scale(0.9);
+    }
+}
+
+.boucy-btn {
+	width: 60px;
+	display: block;
+	text-align: center;
+	color: #0058b6;
+	font-size: 45px;
+	line-height:60px;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+}
+.bounce {
+	position: absolute;
+	bottom: 30px;
+	left: 50% ;
+	width: 60px;
+	height: 60px ;
+	margin-left:-30px;
+	-webkit-border-radius:50%;
+	-moz-border-radius:50%;
+	-ms-border-radius:50%;
+	border-radius:50%;
+	animation: bounce 2s infinite;
+	-webkit-animation: bounce 2s infinite;
+	-moz-animation: bounce 2s infinite;
+	-o-animation: bounce 2s infinite;
+}
+.bounce a {
+    text-decoration: none;
+}
+ 
+@-webkit-keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {-webkit-transform: translateY(0);}	
+	40% {-webkit-transform: translateY(-30px);}
+	60% {-webkit-transform: translateY(-15px);}
+}
+ 
+@-moz-keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {-moz-transform: translateY(0);}
+	40% {-moz-transform: translateY(-30px);}
+	60% {-moz-transform: translateY(-15px);}
+}
+ 
+@-o-keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {-o-transform: translateY(0);}
+	40% {-o-transform: translateY(-30px);}
+	60% {-o-transform: translateY(-15px);}
+}
+@keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+	40% {transform: translateY(-30px);}
+	60% {transform: translateY(-15px);}
+}
+
+/*
+==========================================
+    About Section CSS
+==========================================
+*/
+.about-img img{
+    z-index: 0;
+
+}
+.about-img, .about-content {
+    margin-bottom: 30px;
+}
+.about-content {
+	background: #fff;
+	padding: 30px;
+	box-shadow: 0 3px 10px 0 #aaa;
+    border-top: 7px solid #007bff;
+    border-radius: 5px;
+	z-index: 5;
+}
+.about-social .nav-link {
+	padding: 0 13px;
+}
+.about-social i {
+	font-size: 30px;
+}
+/*
+==========================================
+    Features Section CSS
+==========================================
+*/
+.features-area {
+    background: #A8E6CF;
+}
+.single-feature {
+    margin-bottom: 30px;
+}
+.single-feature i {
+	background: #fff;
+	font-size: 40px;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    -ms-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+}
+.single-feature:hover i{
+    background: #007bff;
+    color: #fff;
+}
+/*
+==========================================
+    Services Section CSS
+==========================================
+*/
+.single-service {
+    padding-bottom: 30px;
+    font-family: 'Montserrat', sans-serif;
+}
+.single-service i {
+	font-size: 40px;
+	color: #A8E6CF;
+	width: 70px;
+	margin-right: 0;
+	margin-top: 7px;
+	-webkit-transition: 0.3s ease-in-out;
+	-moz-transition: 0.3s ease-in-out;
+	-ms-transition: 0.3s ease-in-out;
+	-o-transition: 0.3s ease-in-out;
+	transition: 0.3s ease-in-out;
+}
+.single-service h5 {
+    padding: 0 !important;
+}
+.single-service .media-body{
+    font-size: 14px;
+    color: #567;
+}
+.single-service:hover i{
+    color: #007bff;
+}
+
+/*
+==========================================
+    Portfolio Section CSS
+==========================================
+*/
+.portfolio-area {
+    background: #A8E6CF;
+}
+.single-portfolio {
+    position: relative;
+    overflow: hidden;
+    border: 5px solid #fff;
+    margin-bottom: 30px;
+}
+.single-portfolio .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.6);
+    width: 100%;
+    height: 100%;
+    
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+    opacity: 0;
+
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    -ms-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+}
+.single-portfolio:hover .overlay {
+    opacity: 1;
+    -webkit-transform: scale(0.95);
+    -moz-transform: scale(0.95);
+    -ms-transform: scale(0.95);
+    -o-transform: scale(0.95);
+    transform: scale(0.95);
+}
+.single-portfolio .overlay i {
+    width: 70px;
+    height: 70px;
+    background: #fff;
+    color: #007bff;
+    text-align: center;
+    line-height: 70px;
+    border-radius: 50%;
+    font-size: 25px;
+}
+.mfp-s-loading .mfp-preloader {
+    color: red;
+  }
+/*
+==========================================
+    Pricing Section CSS
+==========================================
+*/
+.single-pricing {
+    margin-bottom: 30px;
+}
+.single-pricing .card {
+    border: none;
+    border-top: 7px solid #007bff;
+    box-shadow: 0 0 10px 0 #E1E1F2;
+    
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    -ms-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+}
+.single-pricing .card:hover {
+    box-shadow: 0 0 20px 5px #c0c0c0;
+}
+.single-pricing .card-btn a{
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 0 0 0.25rem 0.25rem;
+
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    -ms-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+}
+/*
+==========================================
+    Feedback Section CSS
+==========================================
+*/
+.feedback-area {
+    background: #A8E6CF;
+}
+.single-feedback {
+    background: #fff;
+}
+.single-feedback img{
+    width: 100px !important;
+    height: 100px;
+    margin: 0 auto;
+    border-radius: 50%;
+    border: 5px solid #223;
+}
+.single-feedback p{
+    font-size: 15px;
+}
+.owl-nav {
+    margin-top: 30px !important;
+}
+.owl-prev {
+	background: #fff !important;
+	border-radius: 0 !important;
+	color: #223 !important;
+	font-size: 30px !important;
+    padding: 5px 15px !important;
+    margin-right: 15px !important;
+}
+.owl-prev:hover {
+    color: #007bff !important;
+}
+.owl-next {
+	background: #fff !important;
+	border-radius: 0 !important;
+	color: #223 !important;
+	font-size: 30px !important;
+    padding: 5px 15px !important;
+    margin-left: 15px !important;
+}
+.owl-next:hover {
+    color: #007bff !important;
+}
+
+
+/*
+==========================================
+    Contact Section CSS
+==========================================
+*/
+.contact-area label {
+    font-weight: 600;
+}
+.contact-area .form-control {
+	border-radius: 0;
+	border: none;
+	box-shadow: -1px 1px 4px 0px #B4B4B4;
+}
+
+/*
+==========================================
+    Footer Section CSS
+==========================================
+*/
+.footer-area {
+    background: #223;
+}
+.footer-area .copywrite-text p{
+    padding: 0 10px;
+}
+.footer-social .nav-link {
+    padding: 0;
+    color: #fff !important;
+}
+.footer-social i {
+    font-size: 16px;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    border-radius: 50%;
+    background: #fff;
+    text-align: center;
+    margin-left: 7.5px;
+    margin-right: 7.5px;
+}
+.footer-social i.fa-facebook-f{
+    background: #3b5998;
+
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    -ms-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+}
+.footer-social i.fa-facebook-f:hover{
+    background: #4c78d6;
+}
+
+.footer-social i.fa-twitter{
+    background: #1da1f2;
+
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    -ms-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+}
+.footer-social i.fa-twitter:hover{
+    background: hsl(203, 100%, 68%);
+}
+
+.footer-social i.fa-google-plus-g{
+    background: #ea4335;
+
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    -ms-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+}
+.footer-social i.fa-google-plus-g:hover{
+    background: #ff5a4b;
+}
+
+.footer-social i.fa-instagram{
+    background: #c32aa3;
+
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    -ms-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+}
+.footer-social i.fa-instagram:hover{
+    background: #ff38d4;
+}
+
+.footer-social i.fa-pinterest-p{
+    background: #bd081c;
+
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    -ms-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+}
+.footer-social i.fa-pinterest-p:hover{
+    background: #ff001e;
+}
+
+/*--  Back to top CSS --*/
+#toTop{
+	position: fixed;
+	bottom: 30px;
+	right: 30px;
+	cursor: pointer;
+    display: none;
+    z-index: 99999;
+}
+.top-button i {
+    background: #007bff;
+    color: #fff;
+    font-size: 20px;
+    height: 50px;
+    width: 50px;
+    display: inline-block;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+}
+.top-button i:hover {
+    background: #7f56fd;
+    color: #fff;
+}

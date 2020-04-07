@@ -1,0 +1,84 @@
+/*******************************
+	All Responsive Code
+*******************************/
+@media only screen and (max-width : 576px) {
+	.navbar {
+		padding: 0 15px !important;
+	}
+	.nav-item.nav-link-primary{
+		padding-top: 10px;
+		padding-bottom: 20px !important;
+	}
+	.about-content {
+		padding: 30px 5px;
+	}
+}
+
+@media only screen and (max-width : 767px) {
+	.mr--100{
+		margin-right: 0px;
+	}
+	.ml--100{
+		margin-left: 0px;
+	}
+	.navbar {
+		background: #fff;
+		text-align: center;
+	}
+	.menu-shrink {
+		background: #fff;
+	}
+	.single-pricing {
+		max-width: 400px;
+	}
+	.last-nav .nav-link{
+		padding-top: 8px;
+		padding-bottom: 30px;
+	}
+	.hero-text h2.display-4 {
+		font-size: 30px;
+	}
+	.hero-text p {
+		font-size: 15px;
+		width: 100% !important;
+	}
+	.hero-text .btn-primary {
+		font-size: 16px;
+		padding: 10px 25px;
+	}
+
+	.about-social .nav-link {
+		padding: 0 10px;
+	}
+
+	
+}
+
+@media only screen and (min-width : 768px) and (max-width : 991px) {
+	.mr--100{
+		margin-right: 0px;
+	}
+	.ml--100{
+		margin-left: 0px;
+	}
+	.navbar {
+		background: linear-gradient(to top, #eeeeee, #f1f1f1, #f4f4f4, #f8f8f8, #fbfbfb, #fbfbfb, #fbfbfb, #fbfbfb, #f8f8f8, #f4f4f4, #f1f1f1, #eeeeee);    
+		text-align: center;
+	}
+	.last-nav .nav-link{
+		padding-top: 8px;
+		padding-bottom: 30px;
+	}
+	
+}
+
+@media only screen and (min-width : 992px) and (max-width : 1199px) {
+	.mr--100{
+		margin-right: 0px;
+	}
+	.ml--100{
+		margin-left: 0px;
+	}
+	
+}
+
